@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses & Trainers</title>
+  <link rel="icon" href="images/Roriri logo W.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Poppins";
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #4a90e2, #007aff);
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    .visit-website-btn {
+  padding: 8px 8px;
+  background-color: #007BFF; /* Button color */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.visit-website-btn:hover {
+  background-color: #0056b3; /* Hover color */
+}
+    
+header {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; /* Adjust as needed */
+}
+
+.header-content2 {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+}
+
+.logo {
+  max-width: 150px; /* Adjust size as needed */
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 120px; /* Adjust size for smaller screens */
+  }
+}
+
+    .header-content2 {
+      display: flex;
+      gap: 20px;
+    }
+    .course-card {
+      background-color: white;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .course-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    .card-title {
+      font-weight: bold;
+      color: #007aff;
+    }
+    .card-text {
+      font-size: 1rem;
+    }
+
+    /* Trainer Info */
+    .trainer-info {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #333;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #333;
+      color: #f4f4f4;
+      padding: 2rem 0;
+    }
+    footer a {
+      color: #007aff;
+      text-decoration: none;
+    }
+
+    /* Button Styling */
+    .btn-custom {
+      background-color: #007aff;
+      color: white;
+      border-radius: 25px;
+      padding: 0.75rem 1.5rem;
+      transition: background-color 0.3s ease;
+    }
+    .btn-custom:hover {
+      background-color: #005bb5;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .card-title {
+        font-size: 1.25rem;
+      }
+      .card-text {
+        font-size: 0.95rem;
+      }
+      .logo {
+        max-width: 120px;
+    }
+  }
+    @media (max-width: 576px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .header-content {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <img src="images/Roriri logo W.png" alt="Company Logo" class="img-fluid">
+      
+    </div>
+    <div class="header-content2" style="margin-left: auto;">
+      <a href="https://roririsoft.com/" target="_blank" class="visit-website-btn">Visit Website</a>
+    </div>
+  </header>
+
+  <!-- Courses Section -->
+  <section class="container mt-5">
+    <div class="row">
+      <strong><h2 class="mb-4 text-center">Our Course Offerings</h2></strong>
+      <!-- Course Cards Grid -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card course-card p-3" data-bs-toggle="modal" data-bs-target="#pythonModal">
+            <div class="card-body text-center">
+              <h5 class="card-title">Python</h5>
+              <p class="card-text">Learn Python from basics to advanced concepts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card course-card p-3" data-bs-toggle="modal" data-bs-target="#htmlModal">
+            <div class="card-body text-center">
+              <h5 class="card-title">HTML</h5>
+              <p class="card-text">Master web structure with HTML.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card course-card p-3" data-bs-toggle="modal" data-bs-target="#cssModal">
+            <div class="card-body text-center">
+              <h5 class="card-title">CSS</h5>
+              <p class="card-text">Design stunning websites with CSS.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card course-card p-3" data-bs-toggle="modal" data-bs-target="#jsModal">
+            <div class="card-body text-center">
+              <h5 class="card-title">JavaScript</h5>
+              <p class="card-text">Develop dynamic web applications with JavaScript.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card course-card p-3" data-bs-toggle="modal" data-bs-target="#bootstrapModal">
+            <div class="card-body text-center">
+              <h5 class="card-title">Bootstrap</h5>
+              <p class="card-text">Responsive design with Bootstrap.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card course-card p-3" data-bs-toggle="modal" data-bs-target="#mysqlModal">
+            <div class="card-body text-center">
+              <h5 class="card-title">MySQL</h5>
+              <p class="card-text">Learn database management with MySQL.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card course-card p-3" data-bs-toggle="modal" data-bs-target="#powerbiModal">
+            <div class="card-body text-center">
+              <h5 class="card-title">Power BI</h5>
+              <p class="card-text">Create insightful dashboards with Power BI.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card course-card p-3" data-bs-toggle="modal" data-bs-target="#uiuxModal">
+            <div class="card-body text-center">
+              <h5 class="card-title">UI/UX Design</h5>
+              <p class="card-text">Craft user-friendly designs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card course-card p-3" data-bs-toggle="modal" data-bs-target="#reactModal">
+            <div class="card-body text-center">
+              <h5 class="card-title">React</h5>
+              <p class="card-text">Build interactive UIs with React.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card course-card p-3" data-bs-toggle="modal" data-bs-target="#djangoModal">
+            <div class="card-body text-center">
+              <h5 class="card-title">Django</h5>
+              <p class="card-text">Develop backend applications with Django.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card course-card p-3" data-bs-toggle="modal" data-bs-target="#agileModal">
+            <div class="card-body text-center">
+              <h5 class="card-title">Agile Methodology</h5>
+              <p class="card-text">Master Agile project management.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card course-card p-3" data-bs-toggle="modal" data-bs-target="#reactnativeModal">
+            <div class="card-body text-center">
+              <h5 class="card-title">React Native</h5>
+              <p class="card-text">Create mobile apps with React Native.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trainer Info -->
+    <div class="row mt-5">
+      <div class="col-md-6 mx-auto text-center">
+        <h2 class="mb-4">Trainer Information</h2>
+        <div class="card course-card p-4">
+          <p class="trainer-info">Trainer Daily Charge: ₹4000</p>
+          <p class="trainer-info">Max Students Per Trainer: 40</p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Call to Action Button -->
+    <div class="text-center mt-5">
+      <a href="#" class="btn btn-custom">Enroll Now</a>
+    </div>
+  </section>
+
+  <!-- Modals for Each Course -->
+  <div class="modal fade" id="pythonModal" tabindex="-1" aria-labelledby="pythonModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pythonModalLabel">Python Course Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6><b>Basic</b></h6>
+          <p>Introduction to Python, variables, data types, loops, and functions.</p>
+           <h6><b>Intermediate</b></h6>
+          <p>Object-oriented programming, file handling, error handling, and modules.</p>
+           <h6><b>Expert</b></h6>
+          <p>Advanced topics such as decorators, generators, multithreading, and frameworks.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="htmlModal" tabindex="-1" aria-labelledby="htmlModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="htmlModalLabel">HTML Course Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6><b>Basic</b></h6>
+          <p>Introduction to HTML, basic tags, forms, and tables.</p>
+           <h6><b>Intermediate</b></h6>
+          <p>HTML5 features, multimedia elements, and SEO practices.</p>
+           <h6><b>Expert</b></h6>
+          <p>Advanced HTML5, semantic elements, and best practices.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="cssModal" tabindex="-1" aria-labelledby="cssModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cssModalLabel">CSS Course Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6><b>Basic</b></h6>
+          <p>Introduction to CSS, selectors, and properties.</p>
+           <h6><b>Intermediate</b></h6>
+          <p>Box model, flexbox, and grid layout.</p>
+           <h6><b>Expert</b></h6>
+          <p>CSS animations, transitions, and responsive design.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="jsModal" tabindex="-1" aria-labelledby="jsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="jsModalLabel">JavaScript Course Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6><b>Basic</b></h6>
+          <p>Introduction to JavaScript, syntax, and basic functions.</p>
+           <h6><b>Intermediate</b></h6>
+          <p>DOM manipulation, events, and AJAX.</p>
+           <h6><b>Expert</b></h6>
+          <p>Advanced concepts like closures, promises, and ES6 features.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="bootstrapModal" tabindex="-1" aria-labelledby="bootstrapModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bootstrapModalLabel">Bootstrap Course Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6><b>Basic</b></h6>
+          <p>Introduction to Bootstrap, grid system, and components.</p>
+           <h6><b>Intermediate</b></h6>
+          <p>Bootstrap utilities, customizing themes, and responsive design.</p>
+           <h6><b>Expert</b></h6>
+          <p>Advanced features, integrating with JavaScript, and best practices.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="mysqlModal" tabindex="-1" aria-labelledby="mysqlModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mysqlModalLabel">MySQL Course Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6><b>Basic</b></h6>
+          <p>Introduction to databases, SQL syntax, and basic queries.</p>
+           <h6><b>Intermediate</b></h6>
+          <p>Joins, subqueries, and data manipulation.</p>
+           <h6><b>Expert</b></h6>
+          <p>Database design, normalization, and performance optimization.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="powerbiModal" tabindex="-1" aria-labelledby="powerbiModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="powerbiModalLabel">Power BI Course Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6><b>Basic</b></h6>
+          <p>Introduction to Power BI, data connections, and visuals.</p>
+           <h6><b>Intermediate</b></h6>
+          <p>Creating reports, dashboards, and data modeling.</p>
+           <h6><b>Expert</b></h6>
+          <p>Advanced DAX, Power Query, and sharing insights.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="uiuxModal" tabindex="-1" aria-labelledby="uiuxModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="uiuxModalLabel">UI/UX Design Course Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6><b>Basic</b></h6>
+          <p>Introduction to UI/UX principles and user research.</p>
+           <h6><b>Intermediate</b></h6>
+          <p>Wireframing, prototyping, and user testing.</p>
+           <h6><b>Expert</b></h6>
+          <p>Advanced design systems, accessibility, and usability testing.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="reactModal" tabindex="-1" aria-labelledby="reactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reactModalLabel">React Course Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6><b>Basic</b></h6>
+          <p>Introduction to React, components, and JSX.</p>
+           <h6><b>Intermediate</b></h6>
+          <p>State management, lifecycle methods, and hooks.</p>
+           <h6><b>Expert</b></h6>
+          <p>Performance optimization, advanced hooks, and routing.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="djangoModal" tabindex="-1" aria-labelledby="djangoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="djangoModalLabel">Django Course Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6><b>Basic</b></h6>
+          <p>Introduction to Django, models, and views.</p>
+           <h6><b>Intermediate</b></h6>
+          <p>URL routing, templates, and forms.</p>
+           <h6><b>Expert</b></h6>
+          <p>Advanced topics like middleware, security, and deployment.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="agileModal" tabindex="-1" aria-labelledby="agileModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="agileModalLabel">Agile Methodology Course Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6><b>Basic</b></h6>
+          <p>Introduction to Agile principles and frameworks.</p>
+           <h6><b>Intermediate</b></h6>
+          <p>Scrum methodology, roles, and ceremonies.</p>
+           <h6><b>Expert</b></h6>
+          <p>Agile scaling frameworks and best practices.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="reactnativeModal" tabindex="-1" aria-labelledby="reactnativeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reactnativeModalLabel">React Native Course Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6><b>Basic</b></h6>
+          <p>Introduction to React Native, components, and styling.</p>
+           <h6><b>Intermediate</b></h6>
+          <p>Navigation, state management, and APIs.</p>
+           <h6><b>Expert</b></h6>
+          <p>Performance optimization, native modules, and deployment.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  
+  <footer class="text-center mt-5">
+    <p>Follow us on  
+      <a href="https://www.linkedin.com/company/roriri-software-solutions-pvt-ltd" class="text-decoration-none">LinkedIn</a> | 
+      <a href="#" class="text-decoration-none">Instagram</a>
+    </p>
+    <p>&copy; 2024 | <a href="https://roririsoft.com/" target="_blank">RORIRI Software Solution Pvt Ltd</a> | All rights reserved.</p>
+
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
